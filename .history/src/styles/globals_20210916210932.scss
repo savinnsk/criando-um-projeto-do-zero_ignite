@@ -1,0 +1,53 @@
+* {
+ 
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
+:root {
+
+  --background: #282C34;
+  --white: #F8F8F8;
+  --gray500:#BBBBBB;
+  --gray250: #D7D7D7;
+  --pink : #FF57B2;
+}
+
+
+@media (max-width : 1080px){
+
+  html{
+      font-size : 93.75%  // 15px
+  }
+}
+
+@media (max-width : 720px){
+
+  html{
+      font-size : 87.5% //14px
+  }
+}
+
+body {
+
+  background: var(--background);
+  color : var(--gray250)
+
+}
+
+
+body , input ,button , select , textarea {
+  font : 400 1rem "Inter" , sans-sarif;
+}
+
+button {
+  cursor: pointer ;
+}
+
+
+a{
+  color : inherit ;
+  text-decoration: none;
+}
