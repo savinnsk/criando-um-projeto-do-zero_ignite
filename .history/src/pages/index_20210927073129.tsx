@@ -34,7 +34,7 @@ interface HomeProps {
 
                  <section  className={styles.postContent}>
 
-                   <a href="">{homeProps.title} </a>
+                   <a href="">{homeProps} </a>
 
 
 
@@ -52,7 +52,7 @@ interface HomeProps {
         Prismic.predicates.at('document.type' , 'posts')
       ],{
 
-        fetch: ['posts.title' , 'posts.subtitle' , 'posts.author', 'posts.content'],
+        fetch: ['posts.title' , 'posts.subtitle' , 'post.author'],
         pageSize:1
       }
         
@@ -65,7 +65,7 @@ interface HomeProps {
              slug: post.uid,
              title : post.data.title[0].text,
              subtitle : post.data.subtitle[0].text,
-             
+             author : post.data.author[0].text,
              excerpt:post.data.content.find(content => content.type === 'paragraph')?.text ?? '',
              updatedAt : format(new Date(post.last_publication_date),'',{ locale : ptBR,})
 
